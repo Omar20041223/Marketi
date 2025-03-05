@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:ecommerceapp/core/utils/app_images.dart';
 import 'package:ecommerceapp/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -25,7 +26,7 @@ class _SplashViewState extends State<SplashView> {
         duration: Duration(seconds: 2),
         from: 200,
         child: Center(
-          child: Image.asset("assets/images/splash_view.png"),
+          child: Image.asset(AppImages.logoImage),
         ),
       ),
     );

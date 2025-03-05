@@ -1,3 +1,5 @@
+import 'package:ecommerceapp/core/utils/app_colors.dart';
+import 'package:ecommerceapp/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -56,7 +58,7 @@ class CustomButton extends StatelessWidget {
         child: TextButton(
           onPressed: onPressed,
           style: TextButton.styleFrom(
-            backgroundColor: backgroundColor ?? Color(0xff3F80FF),
+            backgroundColor: backgroundColor ?? AppColors.lightBlue,
             shape: RoundedRectangleBorder(
               borderRadius: borderRadius ?? BorderRadius.circular(14.r),
             ),
@@ -65,7 +67,7 @@ class CustomButton extends StatelessWidget {
             child: Text(
               text,
               style:
-                  textStyle ?? TextStyle(fontSize: 18.sp,fontWeight: FontWeight.w500,color: Colors.white),
+                  textStyle ?? AppStyles.textStyle18W500White,
             ),
           ),
         ),

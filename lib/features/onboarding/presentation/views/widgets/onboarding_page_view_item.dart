@@ -1,3 +1,4 @@
+import 'package:ecommerceapp/core/utils/app_styles.dart';
 import 'package:ecommerceapp/features/onboarding/data/models/onboarding_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,21 +39,13 @@ class _OnboardingPageViewItemState extends State<OnboardingPageViewItem> {
         24.verticalSpace,
         Text(
           widget.onboardingModel.mainText,
-          style: TextStyle(
-            fontSize: 20.sp,
-            fontWeight: FontWeight.w600,
-            color: Colors.black,
-          ),
+          style: AppStyles.textStyle20W600darkBlue,
           textAlign: TextAlign.center,
         ),
         34.verticalSpace,
         Text(
           widget.onboardingModel.descriptionText,
-          style: TextStyle(
-            fontSize: 14.sp,
-            fontWeight: FontWeight.w500,
-            color: Color(0xff001640),
-          ),
+          style: AppStyles.textStyle14W500darkBlue,
           textAlign: TextAlign.center,
         ),
       ],
