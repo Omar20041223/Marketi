@@ -1,12 +1,15 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_colors.dart';
-import '../../../../../core/utils/app_styles.dart';
+import '../../../../../../core/utils/app_colors.dart';
+import '../../../../../../core/utils/app_router.dart';
+import '../../../../../../core/utils/app_styles.dart';
 
 class LoginTail extends StatelessWidget {
-  const LoginTail({super.key});
-
+  const LoginTail({super.key, this.isSignUp = false});
+  final bool isSignUp;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,18 +30,23 @@ class LoginTail extends StatelessWidget {
           ],
         ),
         14.verticalSpace,
-        Text.rich(
-          TextSpan(
-            text: "Are you new in Marketi",
-            style: AppStyles.textStyle12W400Navy,
-            children: [
-              TextSpan(
-                text: " register?",
-                style: AppStyles.textStyle12W500LightBlue,
-              )
-            ],
-          )
+        isSignUp ? SizedBox() :         Text.rich(
+            TextSpan(
+              text: "Are you new in Marketi",
+              style: AppStyles.textStyle12W400Navy,
+              children: [
+                TextSpan(
+                  text: " register?",
+                  recognizer: TapGestureRecognizer()..onTap = () {
+                    GoRouter.of(context).push(AppRouter.kSignUpView);
+                  },
+                  style: AppStyles.textStyle12W500LightBlue,
+                )
+              ],
+            )
         )
+
+
       ],
     );
   }

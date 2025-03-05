@@ -1,6 +1,6 @@
-import 'package:ecommerceapp/features/auth/presentation/views/widgets/login_fields.dart';
-import 'package:ecommerceapp/features/auth/presentation/views/widgets/login_tail.dart';
-import 'package:ecommerceapp/features/auth/presentation/views/widgets/login_view_header.dart';
+import 'package:ecommerceapp/features/auth/presentation/views/widgets/login/login_fields.dart';
+import 'package:ecommerceapp/features/auth/presentation/views/widgets/login/login_tail.dart';
+import 'package:ecommerceapp/features/auth/presentation/views/widgets/login/login_view_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
